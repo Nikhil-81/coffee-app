@@ -1,0 +1,19 @@
+#navbar{
+    display: flex;
+    background-color: black;
+    justify-content: space-around;
+align-items: center;
+    
+}
+#navbar>h3,span{
+    color: white;
+    cursor: pointer;
+}
+
+#menu{
+ display: grid;
+ grid-template-columns: repeat(3,1fr)
+}
+#menu>div>img{
+    width: 50%;
+}

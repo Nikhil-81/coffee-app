@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+  </head>
+
+  <body>
+    <div id="order-form">
+      <!--Add your form html element here-->
+      <!--In form, give #name,#number and #address as HTML id's to relevant input elements -->
+      <!-- confirm button with id "confirm" -->
+      <form onsubmit="display()">
+        <input type="text" placeholder="name" id="name">
+        <input type="text" placeholder="number" id="number">
+        <input type="text" placeholder="address" id="address">
+        <input type="submit">
+      </form>
+    </div>
+    <button id="confirm"></button>
+  </body>
+</html>
+<script>
+  let i=0
+  mass=["Your order is accepted ","Your order is being Prepared ","Your order is being packed  ","Your order is out for delivery" ,"Order delivered"]
+  let form=document.querySelector("form")
+  function display(){
+    event.preventDefault()
+    let name=form.name.value
+    let number=form.number.value
+    let address=form.address.value
+    while(i != mass.length){
+      setTimeout(function(){
+        console.log(mass[i])
+
+    },3000)
+    i++
+    }
+
+    // for(let i=0;i<mass.length;i++){
+    //   setTimeout(function(){
+    //     // alert(mass[i])
+    //     console.log(mass[i])
+    //   },3000)
+    // }
+
+  }
+
+</script>
+Your order is accepted ,Your order is being Prepared ,Your order is being packed  ,Your order is out for delivery ,Order delivered
